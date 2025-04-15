@@ -3,6 +3,7 @@
 This is a dynamic form builder where users can add, configure, and preview different input fields in real-time. It is built with **React**, **Redux Toolkit**, and **TypeScript** to ensure robust state management and type safety.
 
 ## Demo
+
 ![Static Form ScreenShort](Screenshot.png)
 ![Dynamically Form Build](Screenshot..png)
 
@@ -46,13 +47,13 @@ src/
 │ └── formBuilder/
 │ ├──components/ # Components specific to form builder (FieldEditor, FieldList, etc.)
 │ ├──FormBuilder.tsx # Form builder panel (UI to add/edit/remove fields)
-│ └──LivePreview.tsx # Live form preview component 
+│ └──LivePreview.tsx # Live form preview component
 │ ├── formSlice.ts # Redux logic for managing form fields
-│ └── types.ts # # TypeScript interfaces and types for form fields   
+│ └── types.ts # # TypeScript interfaces and types for form fields
+├── App.tsx # Root app component that render layout  
 └── main.tsx # App entry point
 
-
-##  License
+## License
 
 This project is licensed under the **MIT License**.
 
