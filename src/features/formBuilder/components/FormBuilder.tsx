@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
-import { addField, removeField ,updateField} from "../createSlice";
+import { addField, removeField, updateField } from "../createSlice";
 import { FormField } from "../types";
 import { useState } from "react";
 
@@ -26,9 +26,9 @@ const FormBuilder = () => {
     dispatch(addField(newField));
   };
 
-//   const handleRemove = (id: string) => {
-//     dispatch(removeField(id));
-//   };
+  //   const handleRemove = (id: string) => {
+  //     dispatch(removeField(id));
+  //   };
 
   return (
     <div style={{ padding: "2rem", border: "1px solid #ddd" }}>
@@ -48,7 +48,17 @@ const FormBuilder = () => {
         <option value="radio">Radio</option>
       </select>
 
-      <button onClick={handleAddField} style={{ marginLeft: "1rem" ,backgroundColor:"blue", color:"white", border:"none", padding:"0.5rem", borderRadius:"5px"}}> 
+      <button
+        onClick={handleAddField}
+        style={{
+          marginLeft: "1rem",
+          backgroundColor: "blue",
+          color: "white",
+          border: "none",
+          padding: "0.5rem",
+          borderRadius: "5px",
+        }}
+      >
         Add Field
       </button>
       <ul>
@@ -61,7 +71,7 @@ const FormBuilder = () => {
               padding: "1rem",
             }}
           >
-            <strong>{field.type.toUpperCase()} FORM FIELD</strong>
+            <strong>{field.type.toUpperCase()} FIELD</strong>
 
             {/* Label */}
             <div>
@@ -130,9 +140,16 @@ const FormBuilder = () => {
 
             <button
               onClick={() => dispatch(removeField(field.id))}
-              style={{ marginTop: "0.5rem",backgroundColor:"red", color:"white", border:"none", padding:"0.5rem", borderRadius:"5px" }}
+              style={{
+                marginTop: "0.5rem",
+                backgroundColor: "red",
+                color: "white",
+                border: "none",
+                padding: "0.5rem",
+                borderRadius: "5px",
+              }}
             >
-               Remove
+              Remove
             </button>
           </li>
         ))}

@@ -5,12 +5,12 @@ interface FormState {
   fields: FormField[];
 }
 
-// const initialState: FormState = { //for normal form builder
-//   fields: [],
+// const initialState: FormState = {
+//   fields: [],     //for normal form builder
 // };
 
 const initialState: FormState = {
-  fields: JSON.parse(localStorage.getItem('formFields') || '[]'), // Load from localStorage
+  fields: JSON.parse(localStorage.getItem("formFields") || "[]"), // Load from localStorage
 };
 const formSlice = createSlice({
   name: "form",
@@ -50,11 +50,8 @@ const formSlice = createSlice({
     // removeField: (state, action: PayloadAction<string>) => {
     //   state.fields = state.fields.filter((f) => f.id !== action.payload);
     // }, // for normal dynamic form builder
-    
-    },
   },
-);
+});
 
-export const { addField, updateField, removeField  } =
-  formSlice.actions;
+export const { addField, updateField, removeField } = formSlice.actions;
 export default formSlice.reducer;
